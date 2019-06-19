@@ -1,16 +1,22 @@
 <template>
     <div class="app">
-        <Nav />
-        <router-view />
+        <header class="header">
+            <Logo />
+            <Nav />
+        </header>
+        <main>
+            <router-view />
+        </main>
     </div>
 </template>
 
 <script>
+    import Logo from './scripts/components/Logo.vue'
     import Nav from './scripts/components/Nav.vue'
 
     export default {
         name: 'app',
-        components: { Nav },
+        components: { Logo, Nav },
         data: function () {
             return {}
         },
